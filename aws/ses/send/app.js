@@ -37,6 +37,8 @@ server.post('/message', urlencodedParser, function (request, response) {
         };
         console.log(config);
         client.sendEmail(config, function (err, data, res) {
+            console.log(err);
+            console.log(data);
             console.log('Email sent');
         });
     } catch (err) {
